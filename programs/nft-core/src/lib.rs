@@ -33,4 +33,8 @@ pub mod nft_core {
     ) -> Result<()> {
         instructions::init_config::handle_init_config(ctx, reward_rate, burn_bonus)
     }
+
+    pub fn stake(ctx: Context<Stake>) -> Result<()> {
+        instructions::stake::handle_stake(ctx)
+    }
 }
