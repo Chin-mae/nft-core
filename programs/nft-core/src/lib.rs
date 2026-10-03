@@ -37,4 +37,8 @@ pub mod nft_core {
     pub fn stake(ctx: Context<Stake>) -> Result<()> {
         instructions::stake::handle_stake(ctx)
     }
+
+    pub fn claim_rewards(ctx: Context<ClaimRewards>) -> Result<()> {
+        instructions::claim_rewards::handle_claim_rewards(ctx)
+    }
 }
