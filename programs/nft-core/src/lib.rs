@@ -41,4 +41,8 @@ pub mod nft_core {
     pub fn claim_rewards(ctx: Context<ClaimRewards>) -> Result<()> {
         instructions::claim_rewards::handle_claim_rewards(ctx)
     }
+
+    pub fn burn_staked_nft(ctx: Context<BurnStakedNft>) -> Result<()> {
+        instructions::burn_staked_nft::handle_burn_staked_nft(ctx)
+    }
 }
