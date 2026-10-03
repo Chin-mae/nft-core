@@ -25,4 +25,12 @@ pub mod nft_core {
     pub fn increment(ctx: Context<Increment>) -> Result<()> {
         instructions::increment::handle_increment(ctx)
     }
+
+    pub fn init_config(
+        ctx: Context<InitConfig>,
+        reward_rate: u64,
+        burn_bonus: u64,
+    ) -> Result<()> {
+        instructions::init_config::handle_init_config(ctx, reward_rate, burn_bonus)
+    }
 }
